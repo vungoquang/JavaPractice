@@ -68,27 +68,7 @@ public class JavaPractice extends TestGetSet {
         return true;
   }
 
-    public int solution(int[] A) {
-        int max = 0;
-        int sublen = 1;
-        int begin = 0;
-        for (int i = 1; i < A.length; i++) {
-            if (A[i] > A[i-1]) {
-                sublen++;
-            } else {
-                if (sublen > max) {
-                    max = sublen;
-                    begin = i - max;
-                }
-                sublen = 1;
-            }
-        }
-        if (sublen > max) {
-            max = sublen;
-            begin = A.length - max;
-        }
-        return begin;
-    }
+
 
 
     public static void main(String[] args){
@@ -101,8 +81,8 @@ public class JavaPractice extends TestGetSet {
 //        java.setName("vungo quang");
 //        System.out.println(java.getName());
 //        java.testArraylist();
-        int result= java.solution(new int[] {2, 2, 2, 2, 1, 2, -1, 2, 1, 3});
-        System.out.println("print max longest: " + result);
+//        int result= java.solution(new int[] {2, 2, 2, 2, 1, 2, -1, 2, 1, 3});
+//        System.out.println("print max longest: " + result);
 
     }
 }
